@@ -1,0 +1,19 @@
+services:
+  front-end:
+    build: . # or ./frontend
+    container_name: front-end
+    # Add these two lines to attach the terminal:
+    # tty: true 
+    # stdin_open: true
+    ports:
+      - "5174:5173"
+    volumes:
+      # - ./front-end:/app
+      - .:/app
+      - deno-cache:/deno-dir
+      - ./setup:/setup
+      # fror windows / macos
+      # - /app/node_modules
+
+volumes:
+  deno-cache:

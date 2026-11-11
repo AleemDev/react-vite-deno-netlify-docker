@@ -1,0 +1,6 @@
+[build]
+  command = "deno task build"
+  publish = "dist"
+
+[build.environment]
+  DENO_VERSION = "2.0.0" # Or your preferred version
